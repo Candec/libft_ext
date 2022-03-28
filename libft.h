@@ -6,7 +6,7 @@
 /*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:48:17 by jibanez-          #+#    #+#             */
-/*   Updated: 2021/06/30 17:46:14 by jibanez-         ###   ########.fr       */
+/*   Updated: 2022/03/28 16:44:17 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@
 
 # ifndef ASCII_OFFSET_NUM
 #  define ASCII_OFFSET_NUM 48
+# endif
+
+# ifndef TRUE
+#  define TRUE 1
+# endif
+
+# ifndef FALSE
+#  define FALSE 0
 # endif
 
 /*
@@ -114,6 +122,5 @@ int				ft_strcmp(char *s1, char *s2);
 void			ft_strtoupper(char *str);
 int				ft_max(int args, ...);
 int				ft_isnumber(char *str);
-
 
 #endif
