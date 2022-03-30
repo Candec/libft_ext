@@ -6,7 +6,7 @@
 /*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:48:17 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/03/28 16:44:17 by jibanez-         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:22:45 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@
 
 # ifndef FALSE
 #  define FALSE 0
+# endif
+
+# ifndef ERROR
+#  define ERROR -1
 # endif
 
 /*
@@ -122,5 +126,6 @@ int				ft_strcmp(char *s1, char *s2);
 void			ft_strtoupper(char *str);
 int				ft_max(int args, ...);
 int				ft_isnumber(char *str);
+int				ft_file_format(char *file, char *file_format);
 
 #endif
