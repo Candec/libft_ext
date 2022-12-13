@@ -27,7 +27,11 @@
 # include <fcntl.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4000
+#  define BUFFER_SIZE 128
+# endif
+
+# ifndef FD_MAX_COUNT
+#  define FD_MAX_COUNT 4096
 # endif
 
 # ifndef ASCII_OFFSET_NUM
@@ -47,6 +51,10 @@
 # endif
 
 # define SPC ' '
+
+# define FD_EOF 0
+
+typedef unsigned char	t_uc;
 
 /*
 **First half
@@ -130,6 +138,15 @@ int				ft_max(int args, ...);
 int				ft_isnumber(char *str);
 int				ft_file_format(char *file, char *file_format);
 void			ft_clean_arr(char **arr);
-char			**ft_add_str_to_arr(char **arr, char *str);
+int64_t			ft_ternary(int flag, int64_t a, int64_t b);
+int8_t			ft_set8(int8_t *a, int8_t b);
+int16_t			ft_set16(int16_t *a, int16_t b);
+int32_t			ft_set32(int32_t *a, int32_t b);
+int64_t			ft_set64(int64_t *a, int64_t b);
+void			ft_free(void *pt);
+void			*ft_malloc(size_t size);
+
+
+// char			**ft_add_str_to_arr(char **arr, char *str);
 
 #endif
