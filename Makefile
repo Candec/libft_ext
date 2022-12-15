@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 11:17:55 by jibanez-          #+#    #+#              #
-#    Updated: 2022/03/30 15:34:01 by jibanez-         ###   ########.fr        #
+#    Updated: 2022/12/15 17:34:31 by jibanez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJ = $(SRC:.c=.o)
 
 CC = gcc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address
 
 NAME = libft.a
 

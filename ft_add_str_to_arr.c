@@ -6,7 +6,7 @@
 /*   By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 10:56:21 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/12/15 13:44:32 by jibanez-         ###   ########.fr       */
+/*   Updated: 2022/12/15 15:32:37 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,18 @@ int	ft_add_str_to_arr(char *str, char ***arr)
 	char	*n_str;
 
 	i = 0;
+	j = -1;
 	n_str = ft_malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!n_str)
+		return (1);
 	ft_strcpy(n_str, str, 0, ft_strlen(str));
 	while (*arr && arr[0][i])
 		i++;
 	new_arr = ft_malloc(sizeof(char *) * (i + 2));
 	if (!new_arr)
 		return (1);
-	j = 0;
-	while (j < i)
-	{
+	while (++j < i)
 		new_arr[j] = ft_strdup(arr[0][j]);
-		j++;
-	}
 	new_arr[i] = n_str;
 	new_arr[i + 1] = NULL;
 	if (*arr)
