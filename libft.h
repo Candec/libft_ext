@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:48:17 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/04/06 14:17:00 by jibanez-         ###   ########.fr       */
+/*   Updated: 2022/12/15 15:20:06 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,8 +145,7 @@ int32_t			ft_set32(int32_t *a, int32_t b);
 int64_t			ft_set64(int64_t *a, int64_t b);
 void			ft_free(void *pt);
 void			*ft_malloc(size_t size);
-
-
-// char			**ft_add_str_to_arr(char **arr, char *str);
+void			ft_print_arr(char **arr);
+int				ft_add_str_to_arr(char *str, char ***arr);
 
 #endif
