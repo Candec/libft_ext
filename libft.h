@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+        */
+/*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:48:17 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/12/15 15:20:06 by jibanez-         ###   ########.fr       */
+/*   Updated: 2022/12/19 00:45:10 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # include <stddef.h>
 # include <stdarg.h>
 # include <fcntl.h>
+# include <stdbool.h>
+
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 128
@@ -55,6 +57,14 @@
 # define FD_EOF 0
 
 typedef unsigned char	t_uc;
+
+typedef struct	s_rgb
+{
+	bool	fill;
+	int		r;
+	int		g;
+	int		b;
+}				t_rgb;
 
 /*
 **First half
@@ -147,5 +157,7 @@ void			ft_free(void *pt);
 void			*ft_malloc(size_t size);
 void			ft_print_arr(char **arr);
 int				ft_add_str_to_arr(char *str, char ***arr);
+void			ft_save_rgb(t_rgb *rgb, char *rgb_code);
+
 
 #endif

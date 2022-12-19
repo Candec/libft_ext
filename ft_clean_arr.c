@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_clean_arr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 15:55:53 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/12/19 02:27:57 by jibanez-         ###   ########.fr       */
+/*   Created: 2022/12/18 12:09:09 by jibanez-          #+#    #+#             */
+/*   Updated: 2022/12/19 00:35:53 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+void	ft_clean_arr(char **arr)
 {
-	return ((c >= '0' && c <= '9'));
+	size_t	i;
+
+	i = -1;
+	if (arr != NULL)
+	{
+		while (arr[++i] != NULL)
+			free(arr[i]);
+	}
+	free(arr);
+	arr = NULL;
 }
