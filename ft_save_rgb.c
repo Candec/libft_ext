@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sabe_rgb.c                                      :+:      :+:    :+:   */
+/*   ft_save_rgb.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibanez- <jibanez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 00:42:36 by jibanez-          #+#    #+#             */
-/*   Updated: 2022/12/19 00:42:47 by jibanez-         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:01:55 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ void	ft_save_rgb(t_rgb *rgb, char *rgb_code)
 	ft_clean_arr(rgb_decoded);
 	rgb_decoded = NULL;
 	rgb->fill = TRUE;
+	rgb->int_rgb = ft_encode_rgb(rgb->r, rgb->g, rgb->b);
 }

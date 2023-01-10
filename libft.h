@@ -6,7 +6,7 @@
 /*   By: jibanez- <jibanez- <jibanez-@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:48:17 by jibanez-          #+#    #+#             */
-/*   Updated: 2023/01/09 15:37:25 by jibanez-         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:02:03 by jibanez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ typedef struct	s_rgb
 	int		r;
 	int		g;
 	int		b;
+	int		int_rgb;
 }				t_rgb;
 
 /*
@@ -159,6 +160,7 @@ void			*ft_malloc(size_t size);
 void			ft_print_arr(char **arr);
 int				ft_add_str_to_arr(char *str, char ***arr);
 void			ft_save_rgb(t_rgb *rgb, char *rgb_code);
+int				ft_encode_rgb(uint8_t red, uint8_t green, uint8_t blue);
 
 
 #endif
